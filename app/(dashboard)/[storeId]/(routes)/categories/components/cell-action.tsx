@@ -38,7 +38,8 @@ export const CellAction: React.FC<CellActionProps> = ({ data }) => {
       router.refresh();
 
       toast.success("Category deleted.");
-    } catch (error) {
+    } catch (error) { // eslint-disable-line @typescript-eslint/no-unused-vars
+
       toast.error(
         "Make sure you removed all products using this categories first."
       );

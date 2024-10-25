@@ -29,8 +29,7 @@ import {
 } from "@/components/ui/select"
 import { Input } from "@/components/ui/input";
 import { AlertModal } from "@/components/modals/alert-modal";
-import { ApiAlert } from "@/components/ui/api-alert";
-import { AlertTitle } from "@/components/ui/alert";
+
 
 interface CategoryFormProps {
   initialData: Category | null;
@@ -83,7 +82,8 @@ export const CategoryForm: React.FC<CategoryFormProps> = ({
       router.push(`/${params.storeId}/categories`);
       router.refresh();
       toast.success(toastMessage);
-    } catch (error) {
+    } catch (error) { // eslint-disable-line @typescript-eslint/no-unused-vars
+
       toast.error("Something went wrong");
     } finally {
       setLoading(false);
@@ -99,7 +99,8 @@ export const CategoryForm: React.FC<CategoryFormProps> = ({
       router.refresh();
       router.push(`/${params.storeId}/categories`);
       toast.success("Category deleted.");
-    } catch (error) {
+    } catch (error) { // eslint-disable-line @typescript-eslint/no-unused-vars
+
       toast.error(
         "Make sure you removed all products using this category first."
       );
